@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require owl.carousel
-//= require twitter/bootstrap
 //= require_tree .
 
 
