@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invoice_number: MyString
+  shipper_id: 
+  date: 2015-09-08
+  total_weight_in_lbs: 9.99
+  total_volume_in_cft: 9.99
+  cost: 9.99
+
+two:
+  invoice_number: MyString
+  shipper_id: 
+  date: 2015-09-08
+  total_weight_in_lbs: 9.99
+  total_volume_in_cft: 9.99
+  cost: 9.99

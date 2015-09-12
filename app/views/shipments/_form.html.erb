@@ -1,0 +1,16 @@
+<%= simple_form_for(@shipment) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+      <%= f.association :tracking ,label_method: :tracking_number,value_method: :id %>
+      <%= f.association :customer  ,label_method: :full_name,value_method: :id%>
+      <%= f.input :length_in_inches %>
+      <%= f.input :width_in_inches %>
+      <%= f.input :height_in_inches %>
+      <%= f.input :weight_in_lbs %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Account number:</strong>
+  <%= @bank.account_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bank.name %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @bank.currency %>
+</p>
+
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>

@@ -1,0 +1,54 @@
+<div class="row">
+
+
+  <div class="col-xs-4 col-md-3">
+    <h5>A Banana for NO reason! </h5>
+    <a href="#" class="img-thumbnail">
+      <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcRaeuR1lWMKCrVDfv4HY72uzY8BNdxbe3DHjzkKf7tXGVy4EZXk4w">
+    </a>
+  </div>
+
+
+  <p id="notice"><%= notice %></p>
+<p>
+  <strong>First name:</strong>
+  <%= @customer.first_name %>
+</p>
+<p>
+  <strong>Last name:</strong>
+  <%= @customer.last_name %>
+</p>
+<p>
+  <strong>Alias:</strong>
+  <%= @customer.alias %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+<p>
+  <strong>Telephone:</strong>
+  <%= @customer.telephone %>
+</p>
+<p>
+  <strong>Is forwarder:</strong>
+  <%= @customer.is_forwarder %>
+</p>
+<p>
+  <strong>Customer Number:</strong>
+  <%= @customer.customer_number %>
+</p>
+
+</div>
+
+
+
+<h1></h1>
+
+<%= link_to 'New Customer', new_customer_path(@customer) %>
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Gemfile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+.s4 { color: rgb(128,128,128); font-weight: bold; font-style: italic; }
+.s5 { color: rgb(102,14,122); font-weight: bold; }
+.s6 { color: rgb(0,0,128); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Gemfile</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">source </span><span class="s2">'https://rubygems.org'</span><span class="s1"> 
+ 
+ 
+</span><span class="s3"># Bundle edge Rails instead: gem </span><span class="s4">'rails'</span><span class="s3">, github: </span><span class="s4">'rails/rails'</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'rails'</span><span class="s1">, </span><span class="s2">'4.2.1'</span><span class="s1"> 
+</span><span class="s3"># Use sqlite3 as the database for Active Record</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'sqlite3'</span><span class="s1"> 
+</span><span class="s3"># Use SCSS for stylesheets</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'sass-rails'</span><span class="s1">, </span><span class="s2">'~&gt; 5.0'</span><span class="s1"> 
+</span><span class="s3"># Use Uglifier as compressor for JavaScript assets</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'uglifier'</span><span class="s1">, </span><span class="s2">'&gt;= 1.3.0'</span><span class="s1"> 
+</span><span class="s3"># Use CoffeeScript for .coffee assets and views</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'coffee-rails'</span><span class="s1">, </span><span class="s2">'~&gt; 4.1.0'</span><span class="s1"> 
+</span><span class="s3"># See </span><span class="s4">https://github.com/rails/execjs</span><span class="s3">#readme for more supported runtimes</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'therubyracer'</span><span class="s1">, </span><span class="s0">platforms</span><span class="s1">: </span><span class="s5">:ruby</span><span class="s1"> 
+ 
+</span><span class="s3"># Use jquery as the JavaScript library</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'jquery-rails'</span><span class="s1"> 
+</span><span class="s3"># Turbolinks makes following links in your web application faster. Read more: </span><span class="s4">https://github.com/rails/turbolinks</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'turbolinks'</span><span class="s1"> 
+</span><span class="s3"># Build JSON APIs with ease. Read more: </span><span class="s4">https://github.com/rails/jbuilder</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'jbuilder'</span><span class="s1">, </span><span class="s2">'~&gt; 2.0'</span><span class="s1"> 
+</span><span class="s3"># bundle exec rake doc:rails generates the API under doc/api.</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'sdoc'</span><span class="s1">, </span><span class="s2">'~&gt; 0.4.0'</span><span class="s1">, </span><span class="s0">group</span><span class="s1">: </span><span class="s5">:doc</span><span class="s1"> 
+ 
+</span><span class="s0">gem </span><span class="s2">'simple_form'</span><span class="s1"> 
+</span><span class="s3"># Use ActiveModel has_secure_password</span><span class="s1"> 
+</span><span class="s3"># gem </span><span class="s4">'bcrypt'</span><span class="s3">, </span><span class="s4">'~&gt; 3.1.7'</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'less-rails'</span><span class="s1"> 
+</span><span class="s0">gem </span><span class="s2">'twitter-bootstrap-rails'</span><span class="s1"> 
+ 
+</span><span class="s3">#gem </span><span class="s4">'ransack'</span><span class="s1"> 
+ 
+</span><span class="s3"># Use Unicorn as the app server</span><span class="s1"> 
+</span><span class="s3"># gem </span><span class="s4">'unicorn'</span><span class="s1"> 
+ 
+</span><span class="s3"># Use Capistrano for deployment</span><span class="s1"> 
+</span><span class="s3"># gem </span><span class="s4">'capistrano-rails'</span><span class="s3">, group: </span><span class="s4">:development</span><span class="s1"> 
+ 
+</span><span class="s0">group </span><span class="s5">:development</span><span class="s1">, </span><span class="s5">:test </span><span class="s6">do</span><span class="s1"> 
+  </span><span class="s3"># Call </span><span class="s4">'byebug' </span><span class="s3">anywhere in the code to stop execution and get a debugger console</span><span class="s1"> 
+  </span><span class="s0">gem </span><span class="s2">'byebug'</span><span class="s1"> 
+ 
+  </span><span class="s3"># Access an IRB console on exception pages or by using &lt;%= console %&gt; in views</span><span class="s1"> 
+  </span><span class="s0">gem </span><span class="s2">'web-console'</span><span class="s1">, </span><span class="s2">'~&gt; 2.0'</span><span class="s1"> 
+ 
+  </span><span class="s3"># Spring speeds up development by keeping your application running in the background. Read more: </span><span class="s4">https://github.com/rails/spring</span><span class="s1"> 
+  </span><span class="s0">gem </span><span class="s2">'spring'</span><span class="s1"> 
+</span><span class="s6">end</span><span class="s1"> 
+ 
+</span></pre>
+</body>
+</html>

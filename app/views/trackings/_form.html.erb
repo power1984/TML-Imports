@@ -1,0 +1,14 @@
+<%= simple_form_for(@tracking) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+      <%= f.input :tracking_number %>
+  <%= f.association :logistic, label_method: :logistic, value_method: :id %>
+
+
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

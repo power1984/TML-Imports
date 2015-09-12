@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tracking:</strong>
+  <%= "#{@shipment.tracking_number} #{@shipment.logistic}" %>
+</p>
+
+<p>
+  <strong>Shipper:</strong>
+  <%= @shipment.shipper %>
+</p>
+
+
+<p>
+  <strong>Customer:</strong>
+  <%= @shipment.customer_full_name %>
+</p>
+
+<p>
+  <strong>Length in inches:</strong>
+  <%= @shipment.length_in_inches %>
+</p>
+
+<p>
+  <strong>Width in inches:</strong>
+  <%= @shipment.width_in_inches %>
+</p>
+
+<p>
+  <strong>Height in inches:</strong>
+  <%= @shipment.height_in_inches %>
+</p>
+
+<p>
+  <strong>Weight in lbs:</strong>
+  <%= @shipment.weight_in_lbs %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

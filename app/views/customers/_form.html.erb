@@ -1,0 +1,19 @@
+<%= simple_form_for @customer do |f| %>
+
+
+
+    <%= f.error_notification %>
+    <%= f.input :first_name, label: "First Name:", :size => 4, :style => "text-align: Right" %>
+    <%= f.input :last_name, label: 'Last Name: ', :size => 4, :style => "text-align: Right" %>
+    <%= f.input :alias, label: 'Alias: ', :size => 4, :style => "text-align: Right" %>
+    <%= f.input :address, label: "Address: ", :size => 4, :style => "text-align: Right" %>
+    <%= f.input :email, label: "Email: ", :size => 4, :style => "text-align: Right" %>
+    <%= f.input :telephone, label: "Telephone: ", :size => 4, :style => "text-align: Right" %>
+    <%= f.input :is_forwarder, inline_label: "Customer is a Forwarder", :size => 4, :style => "text-align: Right" %>
+    <%= f.input :customer_number %>
+    <%= f.button :submit %>
+
+
+
+
+<% end %>

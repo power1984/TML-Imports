@@ -1,0 +1,40 @@
+
+<h1>Listing Freight Bills</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Invoice number</th>
+      <th>Shipper</th>
+      <th>Date</th>
+      <th>Total weight in lbs</th>
+      <th>Total volume in cft</th>
+      <th>Cost</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @freight_bills.each do |freight_bill| %>
+      <tr>
+        <td><%= freight_bill.invoice_number %></td>
+        <td><%= freight_bill.shipper_company_name %></td>
+        <td><%= freight_bill.date %></td>
+        <td><%= freight_bill.total_weight_in_lbs %></td>
+        <td><%= freight_bill.total_volume_in_cft %></td>
+        <td><%= freight_bill.cost %></td>
+        <td><%= link_to 'Show', freight_bill %></td>
+        <td><%= link_to 'Edit', edit_freight_bill_path(freight_bill) %></td>
+        <td><%= link_to 'Destroy', freight_bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  <tr>
+    <td colspan="5">total</td>
+    <td colspan="4"><%= FreightBill.totalcost %> </td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Freight bill', new_freight_bill_path %>

@@ -1,0 +1,50 @@
+
+  <h1>Listing Cusasdasdadasdasdtomers</h1>
+
+
+  <%= form_tag(customers_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search First Name" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+
+
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+
+
+      <th>Last name</th>
+      <th>First name</th>
+
+      <th>Alias</th>
+
+      <th>Address</th>
+
+      <th>Email</th>
+
+      <th>Telephone</th>
+
+      <th>Forwarder</th>
+
+      <th>Customer Number</th>
+
+    </tr>
+    </thead>
+    <%= render 'list' %>
+
+
+  </table>
+
+
+  <br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">  <%= link_to 'New Customer', new_customer_path %>
+    </div>
+  </div>
+</div>
+
+

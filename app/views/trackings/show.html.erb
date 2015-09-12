@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tracking number:</strong>
+  <%= @tracking.tracking_number %>
+</p>
+
+<p>
+  <strong>Logistic:</strong>
+  <%= @tracking.logistic %>
+</p>
+
+<%= link_to 'Edit', edit_tracking_path(@tracking) %> |
+<%= link_to 'Back', trackings_path %>

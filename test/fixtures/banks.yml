@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_number: 1
+  name: MyString
+  currency: MyString
+
+two:
+  account_number: 1
+  name: MyString
+  currency: MyString

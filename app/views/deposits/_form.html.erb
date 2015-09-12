@@ -1,0 +1,13 @@
+<%= simple_form_for(@deposit) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+      <%= f.association :bank ,label_method: :account_number,:include_blank => false, value_method: :id%>
+      <%= f.input :date %>
+      <%= f.input :amount %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice number:</strong>
+  <%= @freight_bill.invoice_number %>
+</p>
+
+<p>
+  <strong>Shipper:</strong>
+  <%= @freight_bill.shipper_company_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @freight_bill.date %>
+</p>
+
+<p>
+  <strong>Total weight in lbs:</strong>
+  <%= @freight_bill.total_weight_in_lbs %>
+</p>
+
+<p>
+  <strong>Total volume in cft:</strong>
+  <%= @freight_bill.total_volume_in_cft %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @freight_bill.cost %>
+</p>
+
+<%= link_to 'Edit', edit_freight_bill_path(@freight_bill) %> |
+<%= link_to 'Back', freight_bills_path %>
