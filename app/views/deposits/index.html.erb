@@ -14,7 +14,7 @@
   <tbody>
     <% @deposits.each do |deposit| %>
       <tr>
-        <td><%= deposit.bank %></td>
+        <td><%= deposit.bank_account_number %></td>
         <td><%= deposit.date %></td>
         <td><%= deposit.amount %></td>
         <td><%= link_to 'Show', deposit %></td>

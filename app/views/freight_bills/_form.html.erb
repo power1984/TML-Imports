@@ -3,7 +3,7 @@
 
     <div class="form-inputs">
       <%= f.input :invoice_number %>
-      <%= f.association :shipper, label_method: :created_at, value_method: :id %>
+      <%= f.association :shipper, label_method: :company_name, value_method: :id %>
       <%= f.input :date %>
       <%= f.input :total_weight_in_lbs %>
       <%= f.input :total_volume_in_cft %>
