@@ -65,6 +65,8 @@ end
 
 
 group :production do
+  gem 'rails_12factor'
+  gem 'jquery-turbolinks'
 
 #Gem for Postgresql
   gem 'pg'
