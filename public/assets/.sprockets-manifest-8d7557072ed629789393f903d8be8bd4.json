@@ -97,10 +97,17 @@
       "size": 475952,
       "digest": "5602961fcb5d57db4eb0476120cbbfed7b0fe00ab3680928090a7ea4dcfac884",
       "integrity": "sha256-VgKWH8tdV9tOsEdhIMu/7XsP4AqzaAkoCQp+pNz6yIQ="
+    },
+    "application-ea83f6eeb9c4b881c9246d197098e0b00c86c3e0f827ef0a1a99ae4012c90936.js": {
+      "logical_path": "application.js",
+      "mtime": "2015-09-12T01:58:16-03:00",
+      "size": 561325,
+      "digest": "ea83f6eeb9c4b881c9246d197098e0b00c86c3e0f827ef0a1a99ae4012c90936",
+      "integrity": "sha256-6oP27rnEuIHJJG0ZcJjgsAyGw+D4J+8KGpmuQBLJCTY="
     }
   },
   "assets": {
-    "application.js": "application-7561a5995471abffef81695f2bd1534d8c601ddc441eea58ce6bc178e4b43035.js",
+    "application.js": "application-ea83f6eeb9c4b881c9246d197098e0b00c86c3e0f827ef0a1a99ae4012c90936.js",
     "application.css": "application-5602961fcb5d57db4eb0476120cbbfed7b0fe00ab3680928090a7ea4dcfac884.css",
     "fontawesome-webfont.eot": "fontawesome-webfont-9f8288933d2c87ab3cdbdbda5c9fa1e1e139b01c7c1d1983f91a13be85173975.eot",
     "fontawesome-webfont.svg": "fontawesome-webfont-4f1f9ffe01469bbd03b254ec563c304dd92276514110364148cb7ffdd75d3297.svg",
