@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require bootstrap
 //= require turbolinks
+//= require bootstrap
 //= require owl.carousel
 //= require twitter/bootstrap
 //= require_tree .
