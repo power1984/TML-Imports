@@ -39,7 +39,7 @@ gem 'simple_form'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
-
+gem 'bootstrap-datepicker-rails'
 #gem 'ransack'
 
 # Use Unicorn as the app server

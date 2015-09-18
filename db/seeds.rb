@@ -1,5 +1,5 @@
 Bank.create!([
-                 {account_number: 2400001000162548, first_name: "Peggy ", last_name: "Lam", currency: "1"}
+                 {account_number: 2400001000162548, name: "Peggy Lam", currency: "1"}
              ])
 Customer.create!([
                      {first_name: "Brian", last_name: "Ho", alias: "Power", address: "Puimsteenstraat 9", email: "pilotbear19@gmail.com", telephone: "8519832", is_forwarder: false, customer_number: nil},

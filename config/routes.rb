@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :order_statuses
+  resources :orders
   resources :tests
   resources :deposits
   resources :banks
