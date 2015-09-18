@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ordered_date: 2015-09-17
+  arrived_mia: 2015-09-17
+  arrived_sme: 2015-09-17
+  picked_up: 2015-09-17
+  orders_id: 
+
+two:
+  ordered_date: 2015-09-17
+  arrived_mia: 2015-09-17
+  arrived_sme: 2015-09-17
+  picked_up: 2015-09-17
+  orders_id: 

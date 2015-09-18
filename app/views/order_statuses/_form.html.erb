@@ -1,0 +1,15 @@
+<%= simple_form_for(@order_status) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+      <%= f.input :ordered_date %>
+      <%= f.input :arrived_mia %>
+      <%= f.input :arrived_sme %>
+      <%= f.input :picked_up %>
+      <%= f.association :order %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

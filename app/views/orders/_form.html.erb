@@ -1,0 +1,26 @@
+<%= simple_form_for(@order) do |f| %>
+<%= f.error_notification %>
+
+<div class="form-inputs">
+      <%= f.input :date %>
+      <%= f.input :invoice_numbers %>
+      <%= f.association :customer %>
+      <%= f.input :product_name %>
+      <%= f.input :product_description %>
+      <%= f.input :url %>
+      <%= f.input :size_color %>
+      <%= f.input :quantity %>
+      <%= f.input :online_price %>
+      <%= f.input :tml_price %>
+      <%= f.input :estimated_weight %>
+      <%= f.input :length %>
+      <%= f.input :width %>
+      <%= f.input :height %>
+      <%= f.input :down_payment %>
+      <%= f.input :freight_type %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>

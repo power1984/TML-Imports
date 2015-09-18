@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2015-09-17
+  invoice_numbers: MyString
+  customers_id: 
+  product_name: MyString
+  product_description: MyString
+  url: MyString
+  size_color: MyString
+  quantity: 1
+  online_price: 9.99
+  tml_price: 9.99
+  estimated_weight: 9.99
+  length: 9.99
+  width: 9.99
+  height: 9.99
+  down_payment: 9.99
+  freight_type: false
+
+two:
+  date: 2015-09-17
+  invoice_numbers: MyString
+  customers_id: 
+  product_name: MyString
+  product_description: MyString
+  url: MyString
+  size_color: MyString
+  quantity: 1
+  online_price: 9.99
+  tml_price: 9.99
+  estimated_weight: 9.99
+  length: 9.99
+  width: 9.99
+  height: 9.99
+  down_payment: 9.99
+  freight_type: false
