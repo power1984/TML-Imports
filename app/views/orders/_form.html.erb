@@ -1,7 +1,8 @@
 <%= simple_form_for(@order) do |f| %>
-<%= f.error_notification %>
+    <%= f.error_notification %>
 
-<div class="form-inputs">
+    <div class="form-inputs">
+      <%= f.input :freight_type, as: :select, collection: [["Air", true], ["Sea", false]], :include_blank => false %>
       <%= f.input :date %>
       <%= f.input :invoice_numbers %>
       <%= f.association :customer %>
@@ -17,10 +18,9 @@
       <%= f.input :width %>
       <%= f.input :height %>
       <%= f.input :down_payment %>
-      <%= f.input :freight_type %>
-</div>
+    </div>
 
-<div class="form-actions">
-  <%= f.button :submit %>
-</div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
 <% end %>
