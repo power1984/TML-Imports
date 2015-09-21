@@ -27,7 +27,6 @@ class OrderStatusesController < ApplicationController
   # POST /order_statuses.json
   def create
     @order_status = OrderStatus.new(order_status_params)
-if params[:lalala] ==
     respond_to do |format|
       if @order_status.save
         format.html { redirect_to @order_status, notice: 'order status was successfully created.' }
