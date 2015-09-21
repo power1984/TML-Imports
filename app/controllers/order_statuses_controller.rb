@@ -14,7 +14,6 @@ class OrderStatusesController < ApplicationController
 
   # GET /order_statuses/new
   def new
-
     @order_lines = OrderLine.all
     @order_status = OrderStatus.new
   end

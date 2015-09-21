@@ -95,10 +95,10 @@ ActiveRecord::Schema.define(version: 20150921174158) do
     t.decimal  "length"
     t.decimal  "width"
     t.decimal  "height"
+    t.boolean  "freight_type"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "order_id"
-    t.boolean  "freight_type"
   end
 
   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
