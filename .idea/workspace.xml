@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f36b7fc9-732a-497f-bac4-8ca9ddd1a84f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150918180002_create_new_orders.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150918184714_add_order_id_to_order_lines.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150921172034_rename_order_idto_order_line_id_from_order_statuses.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150921173920_remove_customer_id_from_order_line.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20150921174158_remove_down_payment_from_order_line.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/order_line_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/order_lines.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/order_lines_controller_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -834,7 +842,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442862204431</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added OrderStatus">
+      <created>1442863280790</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1442863280790</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
