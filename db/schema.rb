@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921172034) do
+ActiveRecord::Schema.define(version: 20150921174158) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(version: 20150921172034) do
   end
 
   create_table "order_lines", force: :cascade do |t|
-    t.integer  "customer_id"
     t.string   "product_name"
     t.string   "product_description"
     t.string   "url"
@@ -96,14 +95,12 @@ ActiveRecord::Schema.define(version: 20150921172034) do
     t.decimal  "length"
     t.decimal  "width"
     t.decimal  "height"
-    t.decimal  "down_payment"
-    t.boolean  "freight_type"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "order_id"
+    t.boolean  "freight_type"
   end
 
-  add_index "order_lines", ["customer_id"], name: "index_order_lines_on_customer_id"
   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
 
   create_table "order_statuses", force: :cascade do |t|
