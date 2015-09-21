@@ -1,4 +1,3 @@
-
 <p>
   <strong>Date:</strong>
   <%= @order.order_date %>
@@ -13,13 +12,41 @@
   <strong>Customers:</strong>
   <%= @order.customer_full_name %>
 </p>
+<table class="table table-hover">
 
-<p>
+<thead>
+  <tr>
+    <th>Product Name</th>
+    <th>Product Description</th>
+    <th>Size/Color</th>
+    <th>Quantity</th>
+    <th>Online Price</th>
+    <th>TML Price</th>
+    <th>Estimated Weight</th>
+    <th>Estimated Volume</th>
+    <th>Type Of Freight</th>
+  </tr>
+</thead>
 
-  <% @order.order_lines.each do |order_line|%>
-  <%= order_line.product_name %>
-  <% end %>
-</p>
+
+
+    <% @order.order_lines.each do |order_line| %>
+      <tr>
+      <td><%= order_line.product_name %></td>
+        <td><%= link_to(order_line.product_description, order_line.url , :target => "_blank") %></td>
+        <td><%= order_line.size_color %></td>
+        <td><%= order_line.quantity %></td>
+        <td><%= order_line.online_price %></td>
+        <td><%= order_line.tml_price %></td>
+        <td><%= order_line.estimated_weight %></td>
+        <td><%= order_line.volumecalc %></td>
+        <td><%= order_line.freightchoice %></td>
+        </tr>
+
+    <% end %>
+
+
+    </table>
 
 
 
