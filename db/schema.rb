@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918022557) do
+ActiveRecord::Schema.define(version: 20150921172034) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -83,21 +83,7 @@ ActiveRecord::Schema.define(version: 20150918022557) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "order_statuses", force: :cascade do |t|
-    t.date     "ordered_date"
-    t.date     "arrived_mia"
-    t.date     "arrived_sme"
-    t.date     "picked_up"
-    t.integer  "order_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "order_statuses", ["order_id"], name: "index_order_statuses_on_order_id"
-
-  create_table "orders", force: :cascade do |t|
-    t.date     "date"
-    t.string   "invoice_numbers"
+  create_table "order_lines", force: :cascade do |t|
     t.integer  "customer_id"
     t.string   "product_name"
     t.string   "product_description"
@@ -114,6 +100,31 @@ ActiveRecord::Schema.define(version: 20150918022557) do
     t.boolean  "freight_type"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.integer  "order_id"
+  end
+
+  add_index "order_lines", ["customer_id"], name: "index_order_lines_on_customer_id"
+  add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.date     "ordered_date"
+    t.date     "arrived_mia"
+    t.date     "arrived_sme"
+    t.date     "picked_up"
+    t.integer  "order_line_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "order_statuses", ["order_line_id"], name: "index_order_statuses_on_order_line_id"
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "order_number"
+    t.string   "invoice_number"
+    t.date     "order_date"
+    t.integer  "customer_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "orders", ["customer_id"], name: "index_orders_on_customer_id"

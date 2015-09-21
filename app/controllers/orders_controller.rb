@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    5.times{@order.order_lines.build}
   end
 
   # GET /orders/1/edit
@@ -61,6 +62,10 @@ class OrdersController < ApplicationController
     end
   end
 
+  def order_me
+@order_lines= OrderLine.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
@@ -69,6 +74,9 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:customer_id ,:date, :invoice_numbers, :customers_id, :product_name, :product_description, :url, :size_color, :quantity, :online_price, :tml_price, :estimated_weight, :length, :width, :height, :down_payment, :freight_type)
+      params.require(:order).permit(:customer_id ,:order_date, :invoice_number, :order_number, order_lines_attributes: [:id, :product_name,:product_description,:url,:size_color,:quantity,:online_price,:tml_price,:estimated_weight,:length,:width,:height,:down_payment,:freight_type, :done, :_destroy])
     end
 end
+
+
+

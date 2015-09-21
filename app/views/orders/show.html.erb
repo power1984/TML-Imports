@@ -1,12 +1,12 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @order.date %>
+  <%= @order.order_date %>
 </p>
 
 <p>
   <strong>Invoice numbers:</strong>
-  <%= @order.invoice_numbers %>
+  <%= @order.invoice_number %>
 </p>
 
 <p>
@@ -15,69 +15,13 @@
 </p>
 
 <p>
-  <strong>Product name:</strong>
-  <%= @order.product_name %>
+
+  <% @order.order_lines.each do |order_line|%>
+  <%= order_line.product_name %>
+  <% end %>
 </p>
 
-<p>
-  <strong>Product description:</strong>
-  <%= @order.product_description %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @order.url %>
-</p>
-
-<p>
-  <strong>Size color:</strong>
-  <%= @order.size_color %>
-</p>
-
-<p>
-  <strong>Quantity:</strong>
-  <%= @order.quantity %>
-</p>
-
-<p>
-  <strong>Online price:</strong>
-  <%= @order.online_price %>
-</p>
-
-<p>
-  <strong>Tml price:</strong>
-  <%= @order.tml_price %>
-</p>
-
-<p>
-  <strong>Estimated weight:</strong>
-  <%= @order.estimated_weight %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @order.length %>
-</p>
-
-<p>
-  <strong>Width:</strong>
-  <%= @order.width %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @order.height %>
-</p>
-
-<p>
-  <strong>Down payment:</strong>
-  <%= @order.down_payment %>
-</p>
-
-<p>
-  <strong>Freight type:</strong>
-  <%= @order.freight_type %>
-</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

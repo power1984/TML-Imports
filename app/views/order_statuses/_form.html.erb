@@ -6,7 +6,8 @@
       <%= f.input :arrived_mia %>
       <%= f.input :arrived_sme %>
       <%= f.input :picked_up %>
-      <%= f.association :order %>
+      <%= f.association :order_line, label_method: :product_name ,value_method: :id %>
+
 </div>
 
 <div class="form-actions">
