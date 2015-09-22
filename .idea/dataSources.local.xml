@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails TML: development" uuid="e55decca-aa25-41a9-b7f5-6a424fda9cee">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+    <data-source name="Rails TML: production" uuid="b4ce5375-a810-4a85-9263-fff96ae93a95">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+  </component>
+</project>
