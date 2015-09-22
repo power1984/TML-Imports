@@ -1,12 +1,13 @@
 <tr class="nested-fields">
   <td><%= f.input_field :product_name %></td>
-<td><%= f.input_field :product_description %></td>
-<td><%= f.input_field :url %></td>
-<td><%= f.input_field :size_color %></td>
-<td><%= f.input_field :quantity %></td>
-<td><%= f.input_field :online_price %></td>
-<td><%= f.input_field :tml_price %></td>
-<td><%= link_to_remove_association  f do %>
-  Hello
-<%end%>
-      </tr>
+  <td><%= f.input_field :product_description %></td>
+  <td><%= f.input_field :url %></td>
+  <td><%= f.input_field :size_color %></td>
+  <td><%= f.input_field :quantity %></td>
+  <td><%= f.input_field :online_price %></td>
+  <td><%= f.input_field :tml_price %></td>
+  <td><%= f.input_field :is_air_freight, as: :select, :collection => [['Air',true],['Sea',false]], :include_blank => false %></td>
+  <td><%= link_to_remove_association f do %>
+        Remove
+    <% end %>
+</tr>

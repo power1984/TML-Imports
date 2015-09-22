@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921174158) do
+ActiveRecord::Schema.define(version: 20150922001025) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20150921174158) do
     t.decimal  "length"
     t.decimal  "width"
     t.decimal  "height"
-    t.boolean  "freight_type"
+    t.boolean  "is_air_freight"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "order_id"

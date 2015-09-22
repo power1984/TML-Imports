@@ -4,7 +4,7 @@ class OrderLine < ActiveRecord::Base
 
 
 
-  def volumecalc
+  def volume_calc
     if length.nil? || width.nil? || height.nil?
       return 0
     else
@@ -21,8 +21,8 @@ class OrderLine < ActiveRecord::Base
 
 
 
-  def freightchoice
-    if freight_type
+  def freight_choice
+    if is_air_freight
       return "Air"
     else
       return "Sea"

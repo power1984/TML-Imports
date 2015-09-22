@@ -16,7 +16,7 @@ class CreateOrders < ActiveRecord::Migration
       t.decimal :width
       t.decimal :height
       t.decimal :down_payment
-      t.boolean :freight_type
+      t.boolean :is_air_freight
 
       t.timestamps null: false
     end
