@@ -2,28 +2,28 @@
 
 <p>
   <strong>Ordered date:</strong>
-  <%= @order_status.ordered_date %>
+  <%= @order_line.ordered_date %>
 </p>
 
 <p>
   <strong>Arrived mia:</strong>
-  <%= @order_status.arrived_mia %>
+  <%= @order_line.arrived_mia %>
 </p>
 
 <p>
   <strong>Arrived sme:</strong>
-  <%= @order_status.arrived_sme %>
+  <%= @order_line.arrived_sme %>
 </p>
 
 <p>
   <strong>Picked up:</strong>
-  <%= @order_status.picked_up %>
+  <%= @order_line.picked_up %>
 </p>
 
 <p>
   <strong>Orders:</strong>
-  <%= @order_status.orders %>
+  <%= @order_line.orders %>
 </p>
 
-<%= link_to 'Edit', edit_order_status_path(@order_status) %> |
+<%= link_to 'Edit', edit_order_status_path(@order_line) %> |
 <%= link_to 'Back', order_statuses_path %>

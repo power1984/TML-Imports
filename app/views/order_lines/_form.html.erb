@@ -1,4 +1,4 @@
-<%= simple_form_for(@order_status) do |f| %>
+<%= simple_form_for(@order_line) do |f| %>
 
     <%= f.error_notification %>
 
@@ -8,14 +8,14 @@
         <th>Customer Name</th>
         <th>Order Date</th>
         <th>Ordered?</th>
-
-
       </tr>
       <% @order_lines.each do |order_line| %>
           <tr>
             <td><%= order_line.product_name %></td>
             <td><%= order_line.customer_full_name %></td>
             <td><%= order_line.order_date %></td>
+            <td><%= order_line.order_line %></td>
+            <td><%= @order_line.order_line %></td>
             <td><input type="checkbox"></td>
           </tr>
       <% end %>

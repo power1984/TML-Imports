@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 20150922001025) do
 
   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
 
-  create_table "order_statuses", force: :cascade do |t|
+  create_table "order_lines", force: :cascade do |t|
     t.date     "ordered_date"
     t.date     "arrived_mia"
     t.date     "arrived_sme"

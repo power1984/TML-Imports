@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :order_statuses
   resources :orders
   resources :tests
   resources :deposits
@@ -19,7 +18,9 @@ Rails.application.routes.draw do
   root 'customers#index'
 
   # Example of regular route:
-    get 'order_me' => 'orders#order_me'
+  get 'order_lines/' => 'order_lines#index'
+  get 'order_lines/order_me' => 'order_lines#order_me'
+  put 'order_lines/ordered' => 'order_lines#ordered'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
