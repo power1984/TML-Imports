@@ -4,7 +4,7 @@
     <div class="form-inputs">
       <%= f.input :order_date %>
       <%= f.input :invoice_number %>
-      <%= f.association :customer, label_method: :first_name, value_method: :id , :include_blank=>false %>
+      <%= f.association :customer, label_method: :full_name, value_method: :id , :include_blank=>false %>
       <table id="order_lines">
         <thead>
         <tr>

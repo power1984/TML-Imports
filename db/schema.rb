@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922001025) do
+ActiveRecord::Schema.define(version: 20150925022443) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(version: 20150922001025) do
   end
 
   add_index "deposits", ["bank_id"], name: "index_deposits_on_bank_id"
+
+  create_table "destroys", force: :cascade do |t|
+    t.string   "OrderStatus"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "employees", force: :cascade do |t|
     t.string   "first_name"
@@ -99,21 +105,10 @@ ActiveRecord::Schema.define(version: 20150922001025) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "order_id"
+    t.date     "purchase_order_date"
   end
 
   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
-
-  create_table "order_lines", force: :cascade do |t|
-    t.date     "ordered_date"
-    t.date     "arrived_mia"
-    t.date     "arrived_sme"
-    t.date     "picked_up"
-    t.integer  "order_line_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "order_statuses", ["order_line_id"], name: "index_order_statuses_on_order_line_id"
 
   create_table "orders", force: :cascade do |t|
     t.string   "order_number"

@@ -9,11 +9,11 @@ class OrderLinesController < ApplicationController
 
   # GET /order_lines/order_me
   def order_me
-    @order_lines = OrderLine.all
+    @order_lines = OrderLine.where(:purchase_order_date => NIL)
   end
 
   def ordered
-    OrderLine.where(:id => params[:order_line_ids]).update_all(["ordered_date=?", Date.today])
+    OrderLine.where(:id => params[:order_line_ids]).update_all(["purchase_order_date=?", Date.today])
     redirect_to order_lines_path
     #OrderStatus.where(:order_line_id => params[:order_line_ids]).update_all(...)
     #if only you could access associations from the other end... right? :)

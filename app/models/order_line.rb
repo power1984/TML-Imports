@@ -1,7 +1,5 @@
 class OrderLine < ActiveRecord::Base
   belongs_to :order
-  has_one :order_status, :dependent => :destroy
-  accepts_nested_attributes_for :order_status
 
 
 
@@ -34,7 +32,5 @@ class OrderLine < ActiveRecord::Base
 
   delegate :customer_full_name, to: :order ,prefix: false
   delegate :order_date, to: :order ,prefix: false
-  delegate :ordered_date, to: :order_status, prefix: false, allow_nil: true
-  delegate :arrived_mia, to: :order_status, prefix: false, allow_nil: true
-  delegate :arrived_sme, to: :order_status, prefix: false, allow_nil: true
+
 end
