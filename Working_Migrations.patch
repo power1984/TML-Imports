@@ -1,0 +1,153 @@
+Index: app/views/orders/_order_line_fields.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/orders/_order_line_fields.html.erb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ app/views/orders/_order_line_fields.html.erb	(revision )
+@@ -7,7 +7,6 @@
+   <td><%= f.input_field :online_price %></td>
+   <td><%= f.input_field :tml_price %></td>
+   <td><%= f.input_field :is_air_freight, as: :select, :collection => [['Air',true],['Sea',false]], :include_blank => false %></td>
+-  <td><%= link_to_remove_association f do %>
+-        Remove
++  <td><%= link_to_remove_association f do %>Remove
+     <% end %>
+ </tr>
+\ No newline at end of file
+Index: db/migrate/20150921173920_remove_customer_id_from_order_line.rb
+===================================================================
+--- db/migrate/20150921173920_remove_customer_id_from_order_line.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ db/migrate/20150921173920_remove_customer_id_from_order_line.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
+@@ -1,5 +0,0 @@
+-class RemoveCustomerIdFromOrderLine < ActiveRecord::Migration
+-  def change
+-    remove_column :order_lines , :customer_id
+-  end
+-end
+Index: db/schema.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- db/schema.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ db/schema.rb	(revision )
+@@ -84,6 +84,10 @@
+   end
+ 
+   create_table "order_lines", force: :cascade do |t|
++    t.date     "date"
++    t.string   "invoice_numbers"
++    t.integer  "customer_id"
++    t.integer  "order_id"
+     t.string   "product_name"
+     t.string   "product_description"
+     t.string   "url"
+@@ -98,10 +102,10 @@
+     t.boolean  "is_air_freight"
+     t.datetime "created_at",          null: false
+     t.datetime "updated_at",          null: false
+-    t.integer  "order_id"
+     t.date     "purchase_order_date"
+   end
+ 
++  add_index "order_lines", ["customer_id"], name: "index_order_lines_on_customer_id"
+   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
+ 
+   create_table "orders", force: :cascade do |t|
+Index: app/views/orders/_form.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/orders/_form.html.erb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ app/views/orders/_form.html.erb	(revision )
+@@ -16,6 +16,7 @@
+           <th>Online Price</th>
+           <th>TML Price</th>
+           <th>Freight Type</th>
++          <th></th>
+         </tr>
+         </thead>
+         <tbody>
+@@ -24,15 +25,11 @@
+         <% end %>
+         </tbody>
+       </table>
+-      <div class="links">
++      <div id="links">
+         <%= link_to_add_association f, :order_lines, {data: {:'association-insertion-method' => 'before'}} do %>
+             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Item
+         <% end %>
+-
+-
+       </div>
+-
+-
+     </div>
+ 
+ 
+Index: db/migrate/20150918174326_rename_orders_to_order_lines.rb
+===================================================================
+--- db/migrate/20150918174326_rename_orders_to_order_lines.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ db/migrate/20150918174326_rename_orders_to_order_lines.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
+@@ -1,5 +0,0 @@
+-class RenameOrdersToOrderLines < ActiveRecord::Migration
+-  def change
+-    rename_table :orders , :order_lines
+-  end
+-end
+Index: .idea/TML.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/TML.iml	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ .idea/TML.iml	(revision )
+@@ -221,7 +221,6 @@
+       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+       <envs>
+         <env name="RAILS_ENV" value="development" />
+-        <env name="VERSION" value="20150925022443" />
+       </envs>
+       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+\ No newline at end of file
+Index: db/migrate/20150918184714_add_order_id_to_order_lines.rb
+===================================================================
+--- db/migrate/20150918184714_add_order_id_to_order_lines.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ exportToHTML/20150918184714_add_order_id_to_order_lines.rb	(revision )
+@@ -1,0 +1,0 @@
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dataSources.xml	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ .idea/dataSources.xml	(revision )
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" hash="3741546862">
++  <component name="DataSourceManagerImpl" format="xml" hash="966585732">
+     <data-source source="LOCAL" name="Rails TML: development" uuid="e55decca-aa25-41a9-b7f5-6a424fda9cee">
+       <driver-ref>sqlite.xerial</driver-ref>
+       <synchronize>true</synchronize>
+\ No newline at end of file
+Index: db/migrate/20150918022410_create_orders.rb
+===================================================================
+--- db/migrate/20150918022410_create_orders.rb	(revision 0ae4441dbb88cf215d77bfa78630e6f471e82473)
++++ db/migrate/20150918022410_create_order_lines.rb	(revision )
+@@ -1,9 +1,10 @@
+-class CreateOrders < ActiveRecord::Migration
++class CreateOrderLines < ActiveRecord::Migration
+   def change
+-    create_table :orders do |t|
++    create_table :order_lines do |t|
+       t.date :date
+       t.string :invoice_numbers
+       t.references :customer, index: true, foreign_key: true
++      t.references :order, index: true, foreign_key: true
+       t.string :product_name
+       t.string :product_description
+       t.string :url
