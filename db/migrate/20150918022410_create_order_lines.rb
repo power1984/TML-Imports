@@ -16,8 +16,9 @@ class CreateOrderLines < ActiveRecord::Migration
       t.decimal :length
       t.decimal :width
       t.decimal :height
-      t.decimal :down_payment
       t.boolean :is_air_freight
+      t.date :purchase_date
+
 
       t.timestamps null: false
     end
