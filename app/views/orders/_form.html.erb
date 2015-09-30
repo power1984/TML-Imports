@@ -16,6 +16,7 @@
           <th>Online Price</th>
           <th>TML Price</th>
           <th>Freight Type</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -24,15 +25,11 @@
         <% end %>
         </tbody>
       </table>
-      <div class="links">
+      <div id="links">
         <%= link_to_add_association f, :order_lines, {data: {:'association-insertion-method' => 'before'}} do %>
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Item
         <% end %>
-
-
       </div>
-
-
     </div>
 
 

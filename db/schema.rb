@@ -84,6 +84,10 @@ ActiveRecord::Schema.define(version: 20150925022443) do
   end
 
   create_table "order_lines", force: :cascade do |t|
+    t.date     "date"
+    t.string   "invoice_numbers"
+    t.integer  "customer_id"
+    t.integer  "order_id"
     t.string   "product_name"
     t.string   "product_description"
     t.string   "url"
@@ -98,10 +102,10 @@ ActiveRecord::Schema.define(version: 20150925022443) do
     t.boolean  "is_air_freight"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "order_id"
     t.date     "purchase_order_date"
   end
 
+  add_index "order_lines", ["customer_id"], name: "index_order_lines_on_customer_id"
   add_index "order_lines", ["order_id"], name: "index_order_lines_on_order_id"
 
   create_table "orders", force: :cascade do |t|

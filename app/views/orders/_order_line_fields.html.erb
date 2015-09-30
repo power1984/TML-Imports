@@ -7,7 +7,6 @@
   <td><%= f.input_field :online_price %></td>
   <td><%= f.input_field :tml_price %></td>
   <td><%= f.input_field :is_air_freight, as: :select, :collection => [['Air',true],['Sea',false]], :include_blank => false %></td>
-  <td><%= link_to_remove_association f do %>
-        Remove
+  <td><%= link_to_remove_association f do %>Remove
     <% end %>
 </tr>
