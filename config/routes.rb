@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   root 'customers#index'
 
   # Example of regular route:
-  get 'order_lines/' => 'order_lines#index'
+  get 'order_lines' => 'order_lines#index'
   get 'order_lines/order_me' => 'order_lines#order_me'
   put 'order_lines/ordered' => 'order_lines#ordered'
 

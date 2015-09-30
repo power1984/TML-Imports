@@ -44,12 +44,6 @@ ActiveRecord::Schema.define(version: 20150925022443) do
 
   add_index "deposits", ["bank_id"], name: "index_deposits_on_bank_id"
 
-  create_table "destroys", force: :cascade do |t|
-    t.string   "OrderStatus"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "employees", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
