@@ -20,6 +20,8 @@ gem 'owlcarousel-rails'
 #spreadsheets
 gem 'spreadsheet'
 
+
+gem 'rails_12factor'
 #Elastic Search
 #gem 'elasticsearch-model'
 #gem 'elasticsearch-rails'
