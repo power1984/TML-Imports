@@ -21,7 +21,7 @@ gem 'owlcarousel-rails'
 gem 'spreadsheet'
 
 
-gem 'rails_12factor', group: :production
+#gem 'rails_12factor', group: :production
 #Elastic Search
 #gem 'elasticsearch-model'
 #gem 'elasticsearch-rails'
