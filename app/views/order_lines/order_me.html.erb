@@ -14,7 +14,7 @@
       <% @order_lines.each do |order_line| %>
           <tr>
             <td><%= order_line.customer_full_name %></td>
-            <td><%= order_line.order_date %></td>
+            <td><%= order_line.purchase_date %></td>
             <td><%= link_to(order_line.product_name,order_line.url, target: "_blank") %></td>
             <td><%= order_line.product_description %></td>
             <td><%= order_line.quantity %></td>

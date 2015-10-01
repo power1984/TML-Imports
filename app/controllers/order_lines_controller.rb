@@ -9,7 +9,7 @@ class OrderLinesController < ApplicationController
 
   # GET /order_lines/order_me
   def order_me
-    @order_lines = OrderLine.where(:purchase_order_date => NIL)
+    @order_lines = OrderLine.where(:purchase_date => NIL)
   end
 
   def ordered
