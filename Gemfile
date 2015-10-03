@@ -27,6 +27,7 @@ gem 'spreadsheet'
 #gem 'elasticsearch-rails'
 # Search Kick -- Requires ElasticSearch to be installed
 #gem 'searchkick'
+gem 'bootstrap-datepicker-rails'
 
 #gem 'scoped_search'
 # Use jquery as the JavaScript library
