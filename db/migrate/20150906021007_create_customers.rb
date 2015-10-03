@@ -7,9 +7,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :address
       t.string :email
       t.string :telephone
-      t.boolean :is_forwarder
       t.integer :customer_number
-
       t.timestamps null: false
     end
   end

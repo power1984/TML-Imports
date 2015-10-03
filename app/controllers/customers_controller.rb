@@ -1,6 +1,5 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-  require 'open-uri'
 
 
   # It returns the articles whose titles contain one or more words that form the query
@@ -19,7 +18,7 @@ class CustomersController < ApplicationController
   end
 
 
-  # GET /customers/1
+  #GET /customers/1
   # GET /customers/1.json
   def show
   end

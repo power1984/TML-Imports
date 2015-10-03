@@ -2,19 +2,19 @@
 
 <%= form_tag order_lines_ordered_path, :method => :put do %>
 
-    <table class="table">
-      <tr>
+    <table class="table table-hover">
+      <thead>
         <th>Customer Name</th>
         <th>Order Date</th>
         <th>Product Name</th>
         <th>Product Description</th>
         <th>Qty</th>
         <th>Ordered?</th>
-      </tr>
+      </thead>
       <% @order_lines.each do |order_line| %>
           <tr>
             <td><%= order_line.customer_full_name %></td>
-            <td><%= order_line.purchase_date %></td>
+            <td><%= order_line.order_date %></td>
             <td><%= link_to(order_line.product_name,order_line.url, target: "_blank") %></td>
             <td><%= order_line.product_description %></td>
             <td><%= order_line.quantity %></td>

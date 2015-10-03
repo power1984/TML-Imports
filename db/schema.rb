@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925022443) do
+ActiveRecord::Schema.define(version: 20150918050202) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -100,9 +100,9 @@ ActiveRecord::Schema.define(version: 20150925022443) do
     t.decimal  "width"
     t.decimal  "height"
     t.boolean  "is_air_freight"
+    t.date     "purchase_date"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.date     "purchase_order_date"
   end
 
   add_index "order_lines", ["customer_id"], name: "index_order_lines_on_customer_id"

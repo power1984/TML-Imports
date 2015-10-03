@@ -2,13 +2,13 @@ require 'test_helper'
 
 class ForwardersControllerTest < ActionController::TestCase
   setup do
-    @forwarder = forwarders(:one)
+    @forwarder = fowarders(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:forwarders)
+    assert_not_nil assigns(:fowarders)
   end
 
   test "should get new" do

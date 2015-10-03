@@ -1,28 +1,28 @@
 class ForwardersController < ApplicationController
   before_action :set_forwarder, only: [:show, :edit, :update, :destroy]
 
-  # GET /forwarders
-  # GET /forwarders.json
+  # GET /fowarders
+  # GET /fowarders.json
   def index
     @forwarders = Forwarder.all
   end
 
-  # GET /forwarders/1
-  # GET /forwarders/1.json
+  # GET /fowarders/1
+  # GET /fowarders/1.json
   def show
   end
 
-  # GET /forwarders/new
+  # GET /fowarders/new
   def new
     @forwarder = Forwarder.new
   end
 
-  # GET /forwarders/1/edit
+  # GET /fowarders/1/edit
   def edit
   end
 
-  # POST /forwarders
-  # POST /forwarders.json
+  # POST /fowarders
+  # POST /fowarders.json
   def create
     @forwarder = Forwarder.new(forwarder_params)
 
@@ -37,8 +37,8 @@ class ForwardersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /forwarders/1
-  # PATCH/PUT /forwarders/1.json
+  # PATCH/PUT /fowarders/1
+  # PATCH/PUT /fowarders/1.json
   def update
     respond_to do |format|
       if @forwarder.update(forwarder_params)
@@ -51,8 +51,8 @@ class ForwardersController < ApplicationController
     end
   end
 
-  # DELETE /forwarders/1
-  # DELETE /forwarders/1.json
+  # DELETE /fowarders/1
+  # DELETE /fowarders/1.json
   def destroy
     @forwarder.destroy
     respond_to do |format|

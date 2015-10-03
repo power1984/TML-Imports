@@ -9,7 +9,6 @@ Bank.create!([
                       address: Faker::Address.street_address,
                       email: Faker::Internet.email,
                       telephone: Faker::PhoneNumber.phone_number,
-                      is_forwarder: false,
                       customer_number: nil},
                  ])}
 Logistic.delete_all
