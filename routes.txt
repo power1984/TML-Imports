@@ -1,0 +1,102 @@
+              Prefix Verb   URI Pattern                       Controller#Action
+              orders GET    /orders(.:format)                 orders#index
+                     POST   /orders(.:format)                 orders#create
+           new_order GET    /orders/new(.:format)             orders#new
+          edit_order GET    /orders/:id/edit(.:format)        orders#edit
+               order GET    /orders/:id(.:format)             orders#show
+                     PATCH  /orders/:id(.:format)             orders#update
+                     PUT    /orders/:id(.:format)             orders#update
+                     DELETE /orders/:id(.:format)             orders#destroy
+               tests GET    /tests(.:format)                  tests#index
+                     POST   /tests(.:format)                  tests#create
+            new_test GET    /tests/new(.:format)              tests#new
+           edit_test GET    /tests/:id/edit(.:format)         tests#edit
+                test GET    /tests/:id(.:format)              tests#show
+                     PATCH  /tests/:id(.:format)              tests#update
+                     PUT    /tests/:id(.:format)              tests#update
+                     DELETE /tests/:id(.:format)              tests#destroy
+            deposits GET    /deposits(.:format)               deposits#index
+                     POST   /deposits(.:format)               deposits#create
+         new_deposit GET    /deposits/new(.:format)           deposits#new
+        edit_deposit GET    /deposits/:id/edit(.:format)      deposits#edit
+             deposit GET    /deposits/:id(.:format)           deposits#show
+                     PATCH  /deposits/:id(.:format)           deposits#update
+                     PUT    /deposits/:id(.:format)           deposits#update
+                     DELETE /deposits/:id(.:format)           deposits#destroy
+               banks GET    /banks(.:format)                  banks#index
+                     POST   /banks(.:format)                  banks#create
+            new_bank GET    /banks/new(.:format)              banks#new
+           edit_bank GET    /banks/:id/edit(.:format)         banks#edit
+                bank GET    /banks/:id(.:format)              banks#show
+                     PATCH  /banks/:id(.:format)              banks#update
+                     PUT    /banks/:id(.:format)              banks#update
+                     DELETE /banks/:id(.:format)              banks#destroy
+           logistics GET    /logistics(.:format)              logistics#index
+                     POST   /logistics(.:format)              logistics#create
+        new_logistic GET    /logistics/new(.:format)          logistics#new
+       edit_logistic GET    /logistics/:id/edit(.:format)     logistics#edit
+            logistic GET    /logistics/:id(.:format)          logistics#show
+                     PATCH  /logistics/:id(.:format)          logistics#update
+                     PUT    /logistics/:id(.:format)          logistics#update
+                     DELETE /logistics/:id(.:format)          logistics#destroy
+           employees GET    /employees(.:format)              employees#index
+                     POST   /employees(.:format)              employees#create
+        new_employee GET    /employees/new(.:format)          employees#new
+       edit_employee GET    /employees/:id/edit(.:format)     employees#edit
+            employee GET    /employees/:id(.:format)          employees#show
+                     PATCH  /employees/:id(.:format)          employees#update
+                     PUT    /employees/:id(.:format)          employees#update
+                     DELETE /employees/:id(.:format)          employees#destroy
+       freight_bills GET    /freight_bills(.:format)          freight_bills#index
+                     POST   /freight_bills(.:format)          freight_bills#create
+    new_freight_bill GET    /freight_bills/new(.:format)      freight_bills#new
+   edit_freight_bill GET    /freight_bills/:id/edit(.:format) freight_bills#edit
+        freight_bill GET    /freight_bills/:id(.:format)      freight_bills#show
+                     PATCH  /freight_bills/:id(.:format)      freight_bills#update
+                     PUT    /freight_bills/:id(.:format)      freight_bills#update
+                     DELETE /freight_bills/:id(.:format)      freight_bills#destroy
+            shippers GET    /shippers(.:format)               shippers#index
+                     POST   /shippers(.:format)               shippers#create
+         new_shipper GET    /shippers/new(.:format)           shippers#new
+        edit_shipper GET    /shippers/:id/edit(.:format)      shippers#edit
+             shipper GET    /shippers/:id(.:format)           shippers#show
+                     PATCH  /shippers/:id(.:format)           shippers#update
+                     PUT    /shippers/:id(.:format)           shippers#update
+                     DELETE /shippers/:id(.:format)           shippers#destroy
+           shipments GET    /shipments(.:format)              shipments#index
+                     POST   /shipments(.:format)              shipments#create
+        new_shipment GET    /shipments/new(.:format)          shipments#new
+       edit_shipment GET    /shipments/:id/edit(.:format)     shipments#edit
+            shipment GET    /shipments/:id(.:format)          shipments#show
+                     PATCH  /shipments/:id(.:format)          shipments#update
+                     PUT    /shipments/:id(.:format)          shipments#update
+                     DELETE /shipments/:id(.:format)          shipments#destroy
+          forwarders GET    /forwarders(.:format)             forwarders#index
+                     POST   /forwarders(.:format)             forwarders#create
+       new_forwarder GET    /forwarders/new(.:format)         forwarders#new
+      edit_forwarder GET    /forwarders/:id/edit(.:format)    forwarders#edit
+           forwarder GET    /forwarders/:id(.:format)         forwarders#show
+                     PATCH  /forwarders/:id(.:format)         forwarders#update
+                     PUT    /forwarders/:id(.:format)         forwarders#update
+                     DELETE /forwarders/:id(.:format)         forwarders#destroy
+           trackings GET    /trackings(.:format)              trackings#index
+                     POST   /trackings(.:format)              trackings#create
+        new_tracking GET    /trackings/new(.:format)          trackings#new
+       edit_tracking GET    /trackings/:id/edit(.:format)     trackings#edit
+            tracking GET    /trackings/:id(.:format)          trackings#show
+                     PATCH  /trackings/:id(.:format)          trackings#update
+                     PUT    /trackings/:id(.:format)          trackings#update
+                     DELETE /trackings/:id(.:format)          trackings#destroy
+           customers GET    /customers(.:format)              customers#index
+                     POST   /customers(.:format)              customers#create
+        new_customer GET    /customers/new(.:format)          customers#new
+       edit_customer GET    /customers/:id/edit(.:format)     customers#edit
+            customer GET    /customers/:id(.:format)          customers#show
+                     PATCH  /customers/:id(.:format)          customers#update
+                     PUT    /customers/:id(.:format)          customers#update
+                     DELETE /customers/:id(.:format)          customers#destroy
+                root GET    /                                 customers#index
+customers_forwarders GET    /customers/forwarders(.:format)   customers#forwarders
+         order_lines GET    /order_lines(.:format)            order_lines#index
+order_lines_order_me GET    /order_lines/order_me(.:format)   order_lines#order_me
+ order_lines_ordered GET    /order_lines/ordered(.:format)    order_lines#ordered
