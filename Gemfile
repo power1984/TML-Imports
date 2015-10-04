@@ -27,7 +27,7 @@ gem 'spreadsheet'
 #gem 'elasticsearch-rails'
 # Search Kick -- Requires ElasticSearch to be installed
 #gem 'searchkick'
-gem 'bootstrap-datepicker-rails'
+#gem 'bootstrap-datepicker-rails'
 
 #gem 'scoped_search'
 # Use jquery as the JavaScript library
@@ -49,6 +49,7 @@ gem 'bootstrap-datepicker-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -11,7 +11,6 @@
 <div class="form-inputs">
       <%= f.association :bank ,label_method: :account_number,:include_blank => false, value_method: :id%>
   <%= f.input :date ,:as=> 'string' ,:label => 'Date :', input_html: { class: 'datepicker' }%>
-
       <%= f.input :amount %>
 </div>
 
