@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20150918050202) do
     t.string   "address"
     t.string   "email"
     t.string   "telephone"
-    t.boolean  "is_forwarder"
     t.integer  "customer_number"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

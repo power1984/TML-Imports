@@ -1,8 +1,21 @@
 class OrderLine < ActiveRecord::Base
+
+  #relations
   belongs_to :order
 
 
+#validations
+  validates_presence_of :date
+  validates_presence_of :product_name
+  validates_presence_of :product_description
+  validates_presence_of :url
+  validates_presence_of :size_color
+  validates_presence_of :quantity
+  validates_presence_of :online_price
+  validates_presence_of :tml_price
 
+
+#calculations
   def volume_calc
     if length.nil? || width.nil? || height.nil?
       return 0
@@ -18,8 +31,6 @@ class OrderLine < ActiveRecord::Base
   end
 
 
-
-
   def freight_choice
     if is_air_freight
       return "Air"
@@ -29,8 +40,8 @@ class OrderLine < ActiveRecord::Base
   end
 
 
-
-  delegate :customer_full_name, to: :order ,prefix: false
-  delegate :order_date, to: :order ,prefix: false
+#delegations
+  delegate :customer_full_name, to: :order, prefix: false
+  delegate :order_date, to: :order, prefix: false
 
 end
