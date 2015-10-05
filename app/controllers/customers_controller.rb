@@ -25,7 +25,7 @@ class CustomersController < ApplicationController
 
   # GET /customers/new
   def new
-    @customer = Customer.new
+    @customer = current_user.customers.build
   end
 
   # GET /customers/1/edit
@@ -35,7 +35,7 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    @customer = current_user.customers.build(customer_params)
 
     respond_to do |format|
       if @customer.save

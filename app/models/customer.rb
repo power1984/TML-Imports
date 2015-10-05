@@ -1,5 +1,6 @@
 class Customer < ActiveRecord::Base
   has_many :trackings
+  belongs_to :user
   #require 'spreadsheet'
 
 
