@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-
+ before_action :authenticate_user! ,except: [:index,:show]
 
   # It returns the articles whose titles contain one or more words that form the query
 
