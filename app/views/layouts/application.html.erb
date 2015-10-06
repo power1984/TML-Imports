@@ -38,10 +38,10 @@
             <li><%= link_to 'Trackings', trackings_path %> </li>
             <li><%= link_to 'Bank Accounts', banks_path %> </li>
             <li><%= link_to 'Deposits', deposits_path %> </li>
-            <li><%= link_to 'Orders', orders_path%> </li>
-            <li><%= link_to 'ITEM List', order_lines_path%> </li>
-            <li><%= link_to 'Still To Order', order_lines_order_me_path%> </li>
-            <li><%= link_to("Calculator", "https://docs.google.com/spreadsheets/d/1ZlFoCYxyafQtbmgbFVZnTL370uOOWDnww8jGHg3oJbM/edit#gid=0",:target => "_blank") %></li>
+            <li><%= link_to 'Orders', orders_path %> </li>
+            <li><%= link_to 'ITEM List', order_lines_path %> </li>
+            <li><%= link_to 'Still To Order', order_lines_order_me_path %> </li>
+            <li><%= link_to("Calculator", "https://docs.google.com/spreadsheets/d/1ZlFoCYxyafQtbmgbFVZnTL370uOOWDnww8jGHg3oJbM/edit#gid=0", :target => "_blank") %></li>
           </ul>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -82,14 +82,25 @@
 </nav>
 
 <p classs="notice"><%= notice %></p>
+
 <p classs="alert"><%= alert %></p>
-<%= link_to "Sign Up", new_user_registration_path%>
-<%= link_to "Sign In", new_user_session_path%>
-<%= link_to "Sign Out", destroy_user_session_path%>
 
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <%= yield %>
+    </div>
 
-<%= yield %>
+
+    <div class="col-md-6">
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Sign In", new_user_session_path %>
+      <%= link_to "Sign Out", destroy_user_session_path %>
+    </div>
+  </div>
+
+</div>
 
 
 </body>
