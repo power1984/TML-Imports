@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005135731) do
+ActiveRecord::Schema.define(version: 20151015181951) do
 
   create_table "banks", force: :cascade do |t|
     t.integer  "account_number", limit: 8
@@ -152,6 +152,7 @@ ActiveRecord::Schema.define(version: 20151005135731) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "logistic_id"
+    t.integer  "user_id"
   end
 
   add_index "trackings", ["logistic_id"], name: "index_trackings_on_logistic_id"

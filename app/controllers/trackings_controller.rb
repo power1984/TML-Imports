@@ -1,10 +1,15 @@
 class TrackingsController < ApplicationController
   before_action :set_tracking, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! ,except: [:index,:show]
 
   # GET /trackings
   # GET /trackings.json
   def index
-    @trackings = Tracking.all
+    @trackings = current_user.trackings
+    if params[:search]
+      @trackings= Tracking.search(params[:search])
+
+    end
   end
 
   # GET /trackings/1
@@ -14,7 +19,8 @@ class TrackingsController < ApplicationController
 
   # GET /trackings/new
   def new
-    @tracking = Tracking.new
+
+    @tracking = current_user.trackings.build
   end
 
   # GET /trackings/1/edit
@@ -24,7 +30,9 @@ class TrackingsController < ApplicationController
   # POST /trackings
   # POST /trackings.json
   def create
-    @tracking = Tracking.new(tracking_params)
+
+
+    @tracking = current_user.trackings.build(tracking_params)
 
     respond_to do |format|
       if @tracking.save
@@ -69,6 +77,6 @@ class TrackingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tracking_params
-      params.require(:tracking).permit(:tracking_number, :logistic)
+      params.require(:tracking).permit(:tracking_number, :logistic_id)
     end
 end
